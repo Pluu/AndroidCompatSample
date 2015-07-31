@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.pluu.androidview"
+		  xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name=".DemoMainActivity"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.ContentLoadingProgressBarActivity"
+			android:label="@string/title_activity_content_loading_progress_bar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.SwipeRefreshLayoutActivity"
+			android:label="@string/title_activity_swipe_refresh_layout">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.PopupMenuActivity"
+			android:label="@string/title_activity_popup_menu">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.SlidingPanelLayoutActivity"
+			android:label="@string/title_activity_sliding_panel_layout">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.NestedScrollViewActivity"
+			android:label="@string/title_activity_nested_scroll_view">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.ViewDragHelperActivity"
+			android:label="@string/title_activity_view_drag_helper">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+	</application>
+
+</manifest>
