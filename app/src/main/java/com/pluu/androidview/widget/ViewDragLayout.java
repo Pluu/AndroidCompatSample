@@ -120,42 +120,11 @@ public class ViewDragLayout extends RelativeLayout {
 	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		final int action = MotionEventCompat.getActionMasked(ev);
-
-		if (( action != MotionEvent.ACTION_DOWN)) {
-			mDragHelper.cancel();
-			return super.onInterceptTouchEvent(ev);
-		}
-
 		if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
 			mDragHelper.cancel();
 			return false;
 		}
-
-		final int idx = MotionEventCompat.getActionIndex(ev);
-		final float x = MotionEventCompat.getX(ev, idx);
-		final float y = MotionEventCompat.getY(ev, idx);
-		boolean interceptTap = false;
-
-		switch (action) {
-			case MotionEvent.ACTION_DOWN: {
-				mInitialMotionX = x;
-				mInitialMotionY = y;
-				interceptTap = mDragHelper.isViewUnder(mHeaderView, (int) x, (int) y);
-				break;
-			}
-
-			case MotionEvent.ACTION_MOVE: {
-				final float adx = Math.abs(x - mInitialMotionX);
-				final float ady = Math.abs(y - mInitialMotionY);
-				final int slop = mDragHelper.getTouchSlop();
-				if (ady > slop && adx > ady) {
-					mDragHelper.cancel();
-					return false;
-				}
-			}
-		}
-
-		return mDragHelper.shouldInterceptTouchEvent(ev) || interceptTap;
+		return mDragHelper.shouldInterceptTouchEvent(ev);
 	}
 
 	@Override
@@ -168,7 +137,7 @@ public class ViewDragLayout extends RelativeLayout {
 		final float y = MotionEventCompat.getY(ev, idx);
 
 		boolean isHeaderViewUnder = mDragHelper.isViewUnder(mHeaderView, (int) x, (int) y);
-		boolean isHEaderViewHit = isViewHit(mHeaderView, (int) x, (int) y);
+		boolean isHeaderViewHit = isViewHit(mHeaderView, (int) x, (int) y);
 		switch (action & MotionEventCompat.ACTION_MASK) {
 			case MotionEvent.ACTION_DOWN: {
 				mInitialMotionX = x;
@@ -180,7 +149,7 @@ public class ViewDragLayout extends RelativeLayout {
 				if (mDragOffset == 1.0f || mDragOffset == 0f) {
 					// Click
 					smoothSlideTo(Math.abs(1 - Math.round(mDragOffset)));
-				} else if (isHEaderViewHit) {
+				} else if (isHeaderViewHit) {
 					// Moving
 					smoothSlideTo(Math.round(mDragOffset));
 				}
@@ -189,7 +158,7 @@ public class ViewDragLayout extends RelativeLayout {
 		}
 
 		return isHeaderViewUnder
-			&& isHEaderViewHit
+			&& isHeaderViewHit
 			|| isViewHit(mDescView, (int) x, (int) y);
 	}
 
