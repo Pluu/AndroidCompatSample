@@ -27,6 +27,7 @@ public class ViewDragLayout extends RelativeLayout {
 	private int mDragRange;
 	private int mTop;
 	private float mDragOffset;
+	private int mDragState;
 
 	public ViewDragLayout(Context context) {
 		this(context, null);
@@ -108,6 +109,12 @@ public class ViewDragLayout extends RelativeLayout {
 			final int bottomBound = getHeight() - mHeaderView.getHeight() - mHeaderView.getPaddingBottom();
 			return Math.min(Math.max(top, topBound), bottomBound);
 		}
+
+		@Override
+		public void onViewDragStateChanged(int state) {
+			super.onViewDragStateChanged(state);
+			mDragState = state;
+		}
 	}
 
 	@Override
@@ -146,12 +153,14 @@ public class ViewDragLayout extends RelativeLayout {
 			}
 
 			case MotionEvent.ACTION_UP: {
-				if (mDragOffset == 1.0f || mDragOffset == 0f) {
-					// Click
-					smoothSlideTo(Math.abs(1 - Math.round(mDragOffset)));
-				} else if (isHeaderViewHit) {
-					// Moving
-					smoothSlideTo(Math.round(mDragOffset));
+				if (isHeaderViewHit) {
+					if (mDragState == ViewDragHelper.STATE_SETTLING) {
+						// Moving
+						smoothSlideTo(Math.round(mDragOffset));
+					} else if(mDragState == ViewDragHelper.STATE_IDLE) {
+						// Click
+						smoothSlideTo(Math.abs(1 - Math.round(mDragOffset)));
+					}
 				}
 				break;
 			}
