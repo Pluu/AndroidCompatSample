@@ -27,6 +27,7 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity
 
 		@Override
 		public void run() {
+			refreshData();
 			swipeRefreshWidget.setRefreshing(false);
 		}
 
@@ -45,6 +46,11 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity
 									 R.color.swipe_color_4,
 									 R.color.swipe_color_5);
 
+		refreshData();
+		swipeRefreshWidget.setOnRefreshListener(this);
+	}
+
+	private void refreshData() {
 		final int size = 30;
 		List<String> values = new ArrayList<>(size);
 		for (int i = 0; i < size; i++) {
@@ -58,7 +64,6 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity
 								 values);
 
 		list.setAdapter(arrayAdapter);
-		swipeRefreshWidget.setOnRefreshListener(this);
 	}
 
 	@Override

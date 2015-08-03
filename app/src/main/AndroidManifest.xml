@@ -17,15 +17,6 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name=".compat.ContentLoadingProgressBarActivity"
-			android:label="@string/title_activity_content_loading_progress_bar">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-
-				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
-			</intent-filter>
-		</activity>
-		<activity
 			android:name=".compat.SwipeRefreshLayoutActivity"
 			android:label="@string/title_activity_swipe_refresh_layout">
 			<intent-filter>
@@ -64,6 +55,34 @@
 		<activity
 			android:name=".compat.ViewDragHelperActivity"
 			android:label="@string/title_activity_view_drag_helper">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".compat.ViewCompatActivity"
+			android:label="@string/title_activity_view_compat">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".multiple.MultipleViewActivity"
+			android:configChanges="orientation|screenSize"
+			android:label="@string/title_activity_multiple_view">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".animation.InterpolatorActivity"
+			android:label="@string/title_activity_interpolator">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 

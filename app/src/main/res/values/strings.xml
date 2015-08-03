@@ -1,13 +1,14 @@
 <resources>
 	<string name="app_name">Android View</string>
 	<string name="hello_world">Hello world!</string>
-	<string name="title_activity_content_loading_progress_bar">ContentLoadingProgressBar</string>
-	<string name="action_settings">Settings</string>
-	<string name="title_activity_swipe_refresh_layout">SwipeRefreshLayout</string>
-	<string name="title_activity_popup_menu">PopupMenu</string>
-	<string name="title_activity_sliding_panel_layout">SlidingPanelLayout</string>
-	<string name="title_activity_nested_scroll_view">NestedScrollView</string>
-	<string name="title_activity_view_drag_helper">ViewDragHelper</string>
+	<string name="title_activity_view_compat">1. ViewCompat</string>
+	<string name="title_activity_popup_menu">2. PopupMenu</string>
+	<string name="title_activity_sliding_panel_layout">3. SlidingPanelLayout</string>
+	<string name="title_activity_nested_scroll_view">4. NestedScrollView</string>
+	<string name="title_activity_swipe_refresh_layout">5. SwipeRefreshLayout</string>
+	<string name="title_activity_view_drag_helper">6. ViewDragHelper</string>
+	<string name="title_activity_multiple_view">7. MultipleView</string>
+	<string name="title_activity_interpolator">8. Support Interpolator</string>
 
 	<string name="nested_scroll_long_text">가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 끝</string>
 </resources>
