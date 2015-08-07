@@ -63,7 +63,7 @@ public class InterpolatorActivity extends AppCompatActivity
 		ViewCompat
 			.animate(moveView)
 			.setInterpolator(interpolator)
-			.setDuration(android.R.integer.config_mediumAnimTime)
+			.setDuration(750L)
 			.setStartDelay(250L)
 			.x(xValue);
 	}

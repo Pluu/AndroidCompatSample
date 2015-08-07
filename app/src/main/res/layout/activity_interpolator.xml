@@ -10,20 +10,22 @@
 	tools:context="com.pluu.androidview.animation.InterpolatorActivity">
 
 	<Spinner
+		android:id="@+id/spinner"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/spinner"/>
+		android:layout_height="wrap_content"/>
 
 	<RelativeLayout
 		android:id="@+id/container"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:layout_below="@+id/spinner">
+		android:layout_below="@+id/spinner"
+		android:layout_marginTop="10dp">
+
 		<View
 			android:id="@+id/view"
-			android:layout_width="72dp"
-			android:layout_height="72dp"
-			android:background="@drawable/circle" />
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:background="@drawable/circle"/>
 	</RelativeLayout>
 
 </RelativeLayout>
