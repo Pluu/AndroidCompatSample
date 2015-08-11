@@ -11,4 +11,5 @@
 	<string name="title_activity_interpolator">8. Support Interpolator</string>
 
 	<string name="nested_scroll_long_text">가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 가나다라마바사아자차카타파하 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 끝</string>
+	<string name="title_activity_enum_test">9. Enum Test</string>
 </resources>

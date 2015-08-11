@@ -89,6 +89,15 @@
 				<category android:name="com.pluu.androidview.SAMPLE_CODE"/>
 			</intent-filter>
 		</activity>
+		<activity
+			android:name=".data.EnumTestActivity"
+			android:label="@string/title_activity_enum_test" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="com.pluu.androidview.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
 	</application>
 
 </manifest>
