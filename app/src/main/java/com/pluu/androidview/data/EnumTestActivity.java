@@ -1,14 +1,14 @@
 package com.pluu.androidview.data;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 
-public class EnumTestActivity extends AppCompatActivity {
+public class EnumTestActivity extends BaseActivity {
 
 	private final String TAG = EnumTestActivity.class.getSimpleName();
 
@@ -17,6 +17,7 @@ public class EnumTestActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enum_test);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 	}
 
 	@OnClick(R.id.button)

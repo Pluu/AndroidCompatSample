@@ -5,7 +5,6 @@ import android.support.v4.view.ViewCompat;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.AdapterView;
@@ -17,11 +16,12 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 import com.pluu.androidview.adapter.InterpolatorAdapter;
 import com.pluu.androidview.adapter.item.InterpolatorItem;
 
-public class InterpolatorActivity extends AppCompatActivity
+public class InterpolatorActivity extends BaseActivity
 	implements AdapterView.OnItemSelectedListener {
 
 	@Bind(R.id.spinner)
@@ -38,6 +38,7 @@ public class InterpolatorActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_interpolator);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 
 		List<InterpolatorItem> list = new ArrayList<>();
 		list.add(

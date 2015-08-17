@@ -2,7 +2,6 @@ package com.pluu.androidview.compat;
 
 import android.os.Bundle;
 import android.support.v4.widget.SlidingPaneLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,10 +14,12 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 
-public class SlidingPanelLayoutActivity extends AppCompatActivity
-	implements AdapterView.OnItemClickListener, SlidingPaneLayout.PanelSlideListener {
+public class SlidingPanelLayoutActivity extends BaseActivity
+	implements AdapterView.OnItemClickListener,
+			   SlidingPaneLayout.PanelSlideListener {
 
 	@Bind(R.id.left_pane)
 	ListView listView;
@@ -32,6 +33,7 @@ public class SlidingPanelLayoutActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sliding_panel_layout);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 
 		slidingPaneLayout.setPanelSlideListener(this);
 		slidingPaneLayout.openPane();

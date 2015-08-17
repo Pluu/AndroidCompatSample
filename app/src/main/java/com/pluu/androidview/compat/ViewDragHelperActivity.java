@@ -1,7 +1,6 @@
 package com.pluu.androidview.compat;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,10 +11,11 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 import com.pluu.androidview.widget.ViewDragLayout;
 
-public class ViewDragHelperActivity extends AppCompatActivity
+public class ViewDragHelperActivity extends BaseActivity
 	implements AdapterView.OnItemClickListener {
 
 	@Bind(R.id.listView)
@@ -28,6 +28,7 @@ public class ViewDragHelperActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view_drag_helper);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 
 		final int size = 30;
 		List<String> values = new ArrayList<>(size);

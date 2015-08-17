@@ -2,7 +2,6 @@ package com.pluu.androidview.multiple;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -12,10 +11,11 @@ import java.util.Random;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 import com.pluu.androidview.adapter.RecyclerViewAdapter;
 
-public class MultipleViewActivity extends AppCompatActivity {
+public class MultipleViewActivity extends BaseActivity {
 
 	@Bind(R.id.recyclerView)
 	RecyclerView recyclerView;
@@ -28,6 +28,7 @@ public class MultipleViewActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_multiple_view);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 
 		int columnCount = getResources().getInteger(R.integer.column_count);
 		manager = new GridLayoutManager(this, columnCount);

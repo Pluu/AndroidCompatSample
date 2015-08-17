@@ -3,7 +3,6 @@ package com.pluu.androidview.compat;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -12,9 +11,10 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 
-public class SwipeRefreshLayoutActivity extends AppCompatActivity
+public class SwipeRefreshLayoutActivity extends BaseActivity
 	implements SwipeRefreshLayout.OnRefreshListener {
 
 	@Bind(R.id.swipe_refresh_widget)
@@ -38,6 +38,7 @@ public class SwipeRefreshLayoutActivity extends AppCompatActivity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_swipe_refresh_layout);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 
 		swipeRefreshWidget
 			.setColorSchemeResources(R.color.swipe_color_1,

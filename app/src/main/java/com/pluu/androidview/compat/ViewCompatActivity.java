@@ -3,16 +3,16 @@ package com.pluu.androidview.compat;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.pluu.androidview.BaseActivity;
 import com.pluu.androidview.R;
 
-public class ViewCompatActivity extends AppCompatActivity {
+public class ViewCompatActivity extends BaseActivity {
 
 	@Bind(android.R.id.button1)
 	Button button1;
@@ -24,6 +24,7 @@ public class ViewCompatActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view_compat);
 		ButterKnife.bind(this);
+		enableHoneAsUp();
 
 		ViewCompat.setElevation(button1, 3f);
 
